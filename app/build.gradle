@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.edusoho.playerdemo"
+        minSdkVersion 18
+        targetSdkVersion 29
+        versionCode 2
+        versionName "1.0.1"
+    }
+
+    signingConfigs {
+        debugConfig {
+            storeFile file("key/edusoho.qiqiuyun.jks")
+            storePassword "11111111"
+            keyAlias "key0"
+            keyPassword "11111111"
+        }
+    }
+
+    buildTypes {
+        debug {
+            zipAlignEnabled true
+            minifyEnabled false
+            signingConfig signingConfigs.debugConfig
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            zipAlignEnabled true
+            minifyEnabled true
+            signingConfig signingConfigs.debugConfig
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation "io.reactivex:rxandroid:1.2.1"
+    implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+    implementation 'com.squareup.retrofit2:adapter-rxjava:2.6.2'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.edusoho.cloud:manager:1.0.0'
+    implementation 'com.edusoho.cloud:player:1.0.0'
+
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
+}

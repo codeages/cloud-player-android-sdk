@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="m3u8下载Demo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_download1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onDownload1"
+            android:text="下载1" />
+
+        <Button
+            android:id="@+id/btn_cancel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCancel1"
+            android:text="暂停1" />
+
+        <Button
+            android:id="@+id/btn_delete1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onDelete1"
+            android:text="删除" />
+
+        <TextView
+            android:id="@+id/tv_speed1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="0k/s" />
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:tag="progress1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_download2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onDownload2"
+            android:text="下载2" />
+
+        <Button
+            android:id="@+id/btn_cancel2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCancel2"
+            android:text="暂停2" />
+
+        <Button
+            android:id="@+id/btn_delete2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onDelete2"
+            android:text="删除2" />
+
+        <TextView
+            android:id="@+id/tv_speed2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="0k/s" />
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:tag="progress2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_download3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onDownload3"
+            android:text="下载3"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btn_cancel3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCancel3"
+            android:text="暂停3"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btn_delete3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onDelete3"
+            android:text="删除3"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btn_status3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onStatus3"
+            android:text="状态3"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_speed3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="0k/s"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:tag="progress3" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/btn_select_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:onClick="onSelectDownload"
+            android:text="下载"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btn_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:onClick="onSelectCancel"
+            android:text="暂定"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/btn_select_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:onClick="onSelectDelete"
+            android:text="删除"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="普通文件下载Demo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_download4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onDownload4"
+            android:textSize="10sp"
+            android:text="下载4" />
+
+        <Button
+            android:id="@+id/btn_cancel4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onCancel4"
+            android:textSize="10sp"
+            android:text="暂停4" />
+
+        <Button
+            android:id="@+id/btn_delete4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onDelete4"
+            android:textSize="10sp"
+            android:text="删除4" />
+
+        <Button
+            android:id="@+id/btn_status4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onStatus4"
+            android:textSize="10sp"
+            android:text="状态4" />
+
+        <TextView
+            android:id="@+id/tv_speed4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="10sp"
+            android:text="0k/s" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar4"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:tag="progress4" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_clear_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClearAll"
+            android:text="清除缓存" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

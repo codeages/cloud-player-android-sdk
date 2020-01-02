@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+<!--    <ListView-->
+<!--        android:id="@+id/el_downloading"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_above="@+id/download_tools_layout"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:background="@android:color/white"-->
+<!--        android:divider="@color/disabled_hint_color"-->
+<!--        android:dividerHeight="1px" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_downloading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/download_tools_layout"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white" />
+
+    <include
+        layout="@layout/view_download_tool_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+</RelativeLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_show_courses"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/homepage_item_btn_height"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:background="@drawable/btn_default_bg"
+        android:paddingLeft="28dp">
+
+        <ImageView
+            android:id="@+id/show_courses_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/show_course" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toEndOf="@+id/show_courses_icon"
+            android:text="查看预设课程"
+            android:textColor="@color/primary_font_color"
+            android:textSize="@dimen/normal_font_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/up_circle" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_upload_resource"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/homepage_item_btn_height"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:background="@drawable/btn_default_bg"
+        android:paddingLeft="28dp">
+
+        <ImageView
+            android:id="@+id/upload_resource_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/upload_resource" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toEndOf="@+id/upload_resource_icon"
+            android:text="上传课程资源"
+            android:textColor="@color/primary_font_color"
+            android:textSize="@dimen/normal_font_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/up_circle" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_manage_resource"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/homepage_item_btn_height"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:background="@drawable/btn_default_bg"
+        android:paddingLeft="28dp">
+
+        <ImageView
+            android:id="@+id/manage_resource_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/manage_resource" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toEndOf="@+id/manage_resource_icon"
+            android:text="管理资源库"
+            android:textColor="@color/primary_font_color"
+            android:textSize="@dimen/normal_font_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/up_circle" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_downloaded_resource"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/homepage_item_btn_height"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:background="@drawable/btn_default_bg"
+        android:paddingLeft="28dp">
+
+        <ImageView
+            android:id="@+id/downloaded_resource_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/download_resource" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_toEndOf="@+id/downloaded_resource_icon"
+            android:text="已下载资源"
+            android:textColor="@color/primary_font_color"
+            android:textSize="@dimen/normal_font_size" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/up_circle" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="textPrimary">#212121</color>
+    <color name="textDivider">#f5f5f5</color>
+    <color name="bg_color">#fff5f5f5</color>
+    <color name="seek_background">#19ffffff</color>
+    <color name="seek_secondaryProgress">#4cffffff</color>
+    <color name="seek_progress">#ffffff</color>
+    <color name="textIcons">#ffffff</color>
+    <color name="base_black_54">#8a000000</color>
+    <color name="white">#ffffff</color>
+
+    <color name="primary">#4CCCF9</color>
+    <color name="primary_fb">#0e935c</color>
+    <color name="primary_color">#4CCCF9</color>
+    <color name="primary_font_color">#333333</color>
+    <color name="base_gray">#ececec</color>
+
+    <color name="toolbar_font_color">#313131</color>
+    <color name="button_bg">#fff4f4f4</color>
+    <color name="primary_red_color">#ffff5454</color>
+    <color name="font_grey_color">#ff999999</color>
+    <color name="black_font_color1">#ff333333</color>
+    <color name="primary_pinck_color">#FFFFE5E5</color>
+    <color name="primary_red_color1">#FFFD4852</color>
+    <color name="item_delete_color">#FD4852</color>
+    <color name="font_grey_color1">#FF666666</color>
+    <color name="font_grey_color2">#ff979797</color>
+    <color name="item_edit_bg_color">#F1F1F1</color>
+    <color name="disabled1_hint_color">#F9F9F9</color>
+    <color name="disabled2_hint_color">#FFFFFF</color>
+    <color name="disabled_hint_color">#0D000000</color>
+    <color name="black_font_color2">#FF2B333B</color>
+
+
+</resources>

@@ -1,0 +1,37 @@
+[
+  {
+    "name": "原视频26分钟，试看5分钟, (默认水印，默认位置左下，无指纹)",
+    "watermarkLocation": "",
+    "fingerprint": "",
+    "resNo": "f54d3a9a2c4c4a279b15753792e6b897",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJubyI6ImY1NGQzYTlhMmM0YzRhMjc5YjE1NzUzNzkyZTZiODk3IiwianRpIjoiMmEyNTlhNTUtMzg5Yy00MSIsImV4cCI6MTYwNDc0MDQyNSwidGltZXMiOjEwMDAwMDAsInByZXZpZXciOiIzMDAiLCJuYXRpdmUiOm51bGwsInBsYXlBdWRpbyI6bnVsbCwiaGVhZCI6bnVsbCwic2tpcCI6bnVsbCwiZW5jcnlwdCI6bnVsbH0.VYpJ-p6d0MSrk_Y38X4b37m1E3U6dBvZgiWdy8Z2N0I"
+  },
+  {
+    "name": "原视频26分钟，试看5分钟, (水印左上，有指纹)",
+    "watermarkLocation": "0",
+    "fingerprint": "水印左上，有指纹",
+    "resNo": "f54d3a9a2c4c4a279b15753792e6b897",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJubyI6ImY1NGQzYTlhMmM0YzRhMjc5YjE1NzUzNzkyZTZiODk3IiwianRpIjoiMmEyNTlhNTUtMzg5Yy00MSIsImV4cCI6MTYwNDc0MDQyNSwidGltZXMiOjEwMDAwMDAsInByZXZpZXciOiIzMDAiLCJuYXRpdmUiOm51bGwsInBsYXlBdWRpbyI6bnVsbCwiaGVhZCI6bnVsbCwic2tpcCI6bnVsbCwiZW5jcnlwdCI6bnVsbH0.VYpJ-p6d0MSrk_Y38X4b37m1E3U6dBvZgiWdy8Z2N0I"
+  },
+  {
+    "name": "带片头视频 (水印左下，有指纹)",
+    "watermarkLocation": "2",
+    "fingerprint": "水印左下，有指纹",
+    "resNo": "f54d3a9a2c4c4a279b15753792e6b897",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJubyI6ImY1NGQzYTlhMmM0YzRhMjc5YjE1NzUzNzkyZTZiODk3IiwianRpIjoiMDVlNmM5M2UtZDFkZi00OSIsImV4cCI6MTYwNTA1OTE2MSwidGltZXMiOjEwMDAwMDAsInByZXZpZXciOm51bGwsIm5hdGl2ZSI6bnVsbCwicGxheUF1ZGlvIjpudWxsLCJoZWFkIjoiYjhhYzg4NjY1MzJlNDRmOTliNGJkMzdjOTU3NTlkOGMiLCJza2lwIjpudWxsLCJlbmNyeXB0IjpudWxsfQ.oBFdE82rakBS63EyoT0-l9oen17GSFG5UbZCOzIYjes"
+  },
+  {
+    "name": "默认播放视频，可以音视频切换 (水印右上，无指纹)",
+    "watermarkLocation": "1",
+    "fingerprint": "",
+    "resNo": "f54d3a9a2c4c4a279b15753792e6b897",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJubyI6ImY1NGQzYTlhMmM0YzRhMjc5YjE1NzUzNzkyZTZiODk3IiwianRpIjoiYzg0MWVkNzctYTcwMy00ZiIsImV4cCI6MTYwNTA1OTMzMSwidGltZXMiOjEwMDAwMDAsInByZXZpZXciOm51bGwsIm5hdGl2ZSI6bnVsbCwicGxheUF1ZGlvIjoiMSIsImhlYWQiOm51bGwsInNraXAiOm51bGwsImVuY3J5cHQiOm51bGx9.jUrJFg4QqZ3gvfZ8OZsNASB4t0cQO8Lfg5JOCDmAEdY"
+  },
+  {
+    "name": "默认播放音频，可以音视频切换 (水印右下，无指纹)",
+    "watermarkLocation": "3",
+    "fingerprint": "",
+    "resNo": "f54d3a9a2c4c4a279b15753792e6b897",
+    "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJubyI6ImY1NGQzYTlhMmM0YzRhMjc5YjE1NzUzNzkyZTZiODk3IiwianRpIjoiMWI0Zjc2YTctNzdlYi00NCIsImV4cCI6MTYwNTA1OTMzMywidGltZXMiOjEwMDAwMDAsInByZXZpZXciOm51bGwsIm5hdGl2ZSI6bnVsbCwicGxheUF1ZGlvIjoiMiIsImhlYWQiOm51bGwsInNraXAiOm51bGwsImVuY3J5cHQiOm51bGx9.AyPN8BkTAbPZ0qVgYmu5FZtwzKD86ejNmfKxuu18MwA"
+  }
+]

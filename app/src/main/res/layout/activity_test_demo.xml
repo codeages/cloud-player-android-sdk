@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    android:orientation="vertical"
+    tools:context=".ui.VideoActivity">
+
+    <RelativeLayout
+        android:id="@+id/media_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/video_height"
+        android:layout_weight="1">
+
+        <com.edusoho.cloud.player.view.ResourcePlayer
+            android:id="@+id/resource_player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:keepScreenOn="true" />
+
+        <com.edusoho.playerdemo.view.PlayerControlView
+            android:id="@+id/es_player_control_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/resource_player" />
+
+        <ProgressBar
+            android:id="@+id/pd_loading"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/control_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/video_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/switch_audio_and_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="播放音频" />
+        </LinearLayout>
+
+        <ExpandableListView
+            android:id="@+id/sample_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>

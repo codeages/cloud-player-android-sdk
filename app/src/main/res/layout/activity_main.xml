@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    android:orientation="vertical"
+    tools:context=".ui.VideoActivity">
+
+    <RelativeLayout
+        android:id="@+id/media_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/video_height"
+        android:layout_weight="1">
+
+        <com.edusoho.cloud.player.view.ResourcePlayer
+            android:id="@+id/resource_player"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:keepScreenOn="true" />
+
+        <ProgressBar
+            android:id="@+id/pd_loading"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/audio_rotation_anim"
+            android:layout_width="@dimen/audio_anim_width"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/audio_cover"
+            android:visibility="gone" />
+
+        <com.edusoho.playerdemo.view.PlayerControlView
+            android:id="@+id/es_player_control_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/resource_player" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/control_view"
+        layout="@layout/demo_control_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2" />
+</LinearLayout>

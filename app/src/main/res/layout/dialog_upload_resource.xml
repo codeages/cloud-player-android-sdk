@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/dialog_upload_bg1"
+        android:gravity="center_vertical"
+        android:minWidth="139dp"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp">
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="-15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/dialog_upload_bg" />
+
+        <LinearLayout
+            android:id="@+id/ll_upload_video"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_video" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="发布视频"
+                android:textColor="@color/black_font_color1"
+                android:textSize="@dimen/middle_font_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_upload_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_audio" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="发布音频"
+                android:textColor="@color/black_font_color1"
+                android:textSize="@dimen/middle_font_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_upload_doc"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_document" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="发布文档"
+                android:textColor="@color/black_font_color1"
+                android:textSize="@dimen/middle_font_size" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_upload_anim_ppt"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_ppt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="发布PPT"
+                android:textColor="@color/black_font_color1"
+                android:textSize="@dimen/middle_font_size" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

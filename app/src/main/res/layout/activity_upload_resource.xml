@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tips_bg"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tip_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="提示："
+            android:textColor="@color/primary_red_color1" />
+
+        <TextView
+            android:id="@+id/tv_tips_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="12sp"
+            android:layout_toLeftOf="@+id/iv_tip_hide_btn"
+            android:layout_toRightOf="@+id/tip_content"
+            android:text="上传过程只是演示，资源不会真正上传。上传成功后返回的是演示固定的资源。"
+            android:textColor="@color/primary_red_color1" />
+
+        <ImageView
+            android:id="@+id/iv_tip_hide_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/close" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/iv_download_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="2dp"
+            android:layout_marginRight="3dp"
+            android:button="@drawable/cb_item_bg" />
+
+        <TextView
+            android:id="@+id/resource_title"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/iv_download_selected"
+            android:layout_toLeftOf="@+id/btn_download"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/primary_font_color"
+            android:textSize="@dimen/middle_font_size"
+            tools:text="ES权限系统介绍（系统用户角色）" />
+
+        <com.edusoho.playerdemo.widget.DownloadProgressButton
+            android:id="@+id/btn_download"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</LinearLayout>

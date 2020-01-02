@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.edusoho.playerdemo.view.SwipeItemLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/resource_no"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:textColor="@color/primary_font_color"
+            android:textSize="@dimen/middle_font_size"
+            tools:text="课时 1 :" />
+
+        <TextView
+            android:id="@+id/resource_title"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@+id/btn_play_resource"
+            android:layout_toRightOf="@+id/resource_no"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/primary_font_color"
+            android:textSize="@dimen/middle_font_size"
+            tools:text="ES权限系统介绍（系统用户角色）" />
+
+        <ImageView
+            android:id="@+id/btn_play_resource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/icon_play_resource" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_not_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_item_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/item_edit_bg_color"
+                android:text="编辑"
+                android:textColor="@color/font_grey_color1"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btn_item_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/item_delete_color"
+                android:text="删除"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_delete_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <Button
+                android:id="@+id/btn_delete_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/item_delete_color"
+                android:text="确认删除"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/item_delete_color"
+                android:text="确认删除"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</com.edusoho.playerdemo.view.SwipeItemLayout>

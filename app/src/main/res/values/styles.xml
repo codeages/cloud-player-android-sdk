@@ -1,0 +1,45 @@
+<resources>
+
+    <style name="StartAppTheme" parent="AppThemeNoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:background">@drawable/app_splash</item>
+<!--        <item name="android:textColor">@color/system_text</item>-->
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_fb</item>
+        <item name="android:textColor">@color/primary_color</item>
+        <item name="android:textColorPrimary">@color/primary_font_color</item>
+        <item name="android:textSize">@dimen/base_large_size</item>
+        <item name="android:windowAnimationStyle">@style/SlideToWindowAnimTheme</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:listDivider">@drawable/item_decoration</item>
+    </style>
+
+    <style name="SlideToWindowAnimTheme">
+        <item name="android:activityOpenEnterAnimation">@anim/in_from_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/out_from_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/in_from_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/out_from_right</item>
+    </style>
+</resources>
