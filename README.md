@@ -9,9 +9,8 @@ demo项目包含了对[播放器 Android SDK](http://docs.qiqiuyun.com/v2/resour
 
 ### 3.截图
 
-![][https://github.com/codeages/cloud-player-android-sdk/blob/demo/screenshot/screenshot_1.png] ![][https://github.com/codeages/cloud-player-android-sdk/blob/demo/screenshot/screenshot_2.png]
-
-![][https://github.com/codeages/cloud-player-android-sdk/blob/demo/screenshot/screenshot_3.png] ![][https://github.com/codeages/cloud-player-android-sdk/blob/demo/screenshot/screenshot_4.png]
+![][screenshot/screenshot_1]![][screenshot/screenshot_2]
+![][screenshot/screenshot_3]![][screenshot/screenshot_4]
 
 ## 4.LICENSE
 
