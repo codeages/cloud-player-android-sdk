@@ -9,7 +9,7 @@ demo项目包含了对[播放器 Android SDK](http://docs.qiqiuyun.com/v2/resour
 
 ### 3.截图
 
-<img src="/screenshot/screenshot_1.png" width="480"><img src="/screenshot/screenshot_2.png" width="480"><img src="/screenshot/screenshot_3.png" width="480"><img src="/screenshot/screenshot_4.png" width="480">
+<img src="/screenshot/screenshot_1.png" width="430"><img src="/screenshot/screenshot_2.png" width="430"><img src="/screenshot/screenshot_3.png" width="430"><img src="/screenshot/screenshot_4.png" width="430">
 
 ## 4.LICENSE
 
