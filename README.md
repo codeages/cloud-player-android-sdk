@@ -14,7 +14,7 @@ demo项目包含了对[播放器 Android SDK](http://docs.qiqiuyun.com/v2/resour
 ## 4.LICENSE
 
 ```
-Copyright (c) 2017 LingoChamp Inc.
+Copyright (c) 2019 CodeAges.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
