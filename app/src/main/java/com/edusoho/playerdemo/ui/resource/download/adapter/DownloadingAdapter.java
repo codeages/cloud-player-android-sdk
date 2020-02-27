@@ -63,15 +63,18 @@ public class DownloadingAdapter extends BaseResourceAdapter implements View.OnCl
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        if (mHeaderView != null && viewType == TYPE_HEADER)
-            return new DownloadingAdapter.Holder(mHeaderView, mOnItemClickListener);
+        if (mHeaderView != null && viewType == TYPE_HEADER) {
+            return new Holder(mHeaderView, mOnItemClickListener);
+        }
         View view = LayoutInflater.from(mContext).inflate(R.layout.item_downloading_resource, parent, false);
         return new DownloadingAdapter.Holder(view, mOnItemClickListener);
     }
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        if (getItemViewType(position) == TYPE_HEADER) return;
+        if (getItemViewType(position) == TYPE_HEADER) {
+            return;
+        }
         ResourceBean              resourceBean = resourceBeanList.get(getRealPosition(holder));
         DownloadingAdapter.Holder mHolder      = (DownloadingAdapter.Holder) holder;
 
@@ -86,7 +89,6 @@ public class DownloadingAdapter extends BaseResourceAdapter implements View.OnCl
         mHolder.downloadButton.setTag(holder);
 
         DownloadInfo downloadInfo = resourceBean.getDownloadInfo();
-        resourceBean.setDownloadStatus(downloadInfo.getStatus());
         mHolder.downloadButton.setMax((int) downloadInfo.getTotalLength());
 
         if (downloadInfo.getStatus() != DownloadInfo.Status.COMPLETED && downloadInfo.getStatus() != DownloadInfo.Status.NONE) {

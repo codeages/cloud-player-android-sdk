@@ -1,6 +1,7 @@
 package com.edusoho.playerdemo.ui.resource.present;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -100,20 +101,16 @@ public class PresentResourcesActivity extends BaseResourceActivity {
                 button.setMax((int) totalLength);
                 button.setDownloadStatus(DownloadInfo.Status.PENDING);
                 button.setProgress(1);
-
-                ResourceBean resourceBean = resourceAdapter.getData().get(position);
-                resourceBean.setDownloadStatus(DownloadInfo.Status.PENDING);
             }
 
             @Override
             public void progress(ResourceTask task, long currentOffset, String speed) {
                 int position = resourceAdapter.getRealPosition((RecyclerView.ViewHolder) button.getTag());
-                if (position < 0) return;
+                if (position < 0) {
+                    return;
+                }
                 button.setDownloadStatus(DownloadInfo.Status.RUNNING);
                 button.setProgress((int) currentOffset);
-
-                ResourceBean resourceBean = resourceAdapter.getData().get(position);
-                resourceBean.setDownloadStatus(DownloadInfo.Status.RUNNING);
             }
 
             @Override
@@ -123,9 +120,6 @@ public class PresentResourcesActivity extends BaseResourceActivity {
                     return;
                 }
                 button.setDownloadStatus(DownloadInfo.Status.COMPLETED);
-
-                ResourceBean resourceBean = resourceAdapter.getData().get(position);
-                resourceBean.setDownloadStatus(DownloadInfo.Status.COMPLETED);
 
                 setItemColorByTaskStatus(button, false);
                 resourceAdapter.notifyItemChanged(position + 1);

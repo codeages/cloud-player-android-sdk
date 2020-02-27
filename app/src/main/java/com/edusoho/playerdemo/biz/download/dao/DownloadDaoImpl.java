@@ -12,16 +12,6 @@ public class DownloadDaoImpl implements DownloadDao {
     private SharePrefUtils sharePrefUtils = SharePrefUtils.getInstance(app.getApplicationContext()).open(TABLE_NAME);
 
     @Override
-    public void setResourceDownloadStatus(String resNo, int status) {
-        sharePrefUtils.putInt(resNo, status);
-    }
-
-    @Override
-    public int getResourceDownloadStatus(String resNo) {
-        return sharePrefUtils.getInt(resNo);
-    }
-
-    @Override
     public boolean getAppStatus() {
         int result = sharePrefUtils.getInt(INIT_APP);
         return result == IS_INIT;

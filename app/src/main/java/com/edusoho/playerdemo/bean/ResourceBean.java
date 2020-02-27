@@ -6,8 +6,6 @@ import com.edusoho.cloud.core.entity.ResourceType;
 import com.edusoho.cloud.manager.DownloadInfo;
 import com.edusoho.cloud.manager.DownloadStatusUtils;
 import com.edusoho.cloud.manager.ResourceTask;
-import com.edusoho.playerdemo.biz.download.DownloadService;
-import com.edusoho.playerdemo.biz.download.DownloadServiceImpl;
 import com.edusoho.playerdemo.ui.AudioActivity;
 import com.edusoho.playerdemo.ui.DocumentActivity;
 import com.edusoho.playerdemo.ui.PPTActivity;
@@ -17,13 +15,11 @@ import com.edusoho.playerdemo.util.Utils;
 import java.io.Serializable;
 
 public class ResourceBean implements Serializable {
-    private DownloadService mDownloadService = new DownloadServiceImpl();
 
     public  String              name;
     public  String              resNo;
     public  String              token;
     public  ResourceType        mediaType;
-    private DownloadInfo.Status downloadStatus;
     private boolean             isSelected = false;
 
 
@@ -36,12 +32,7 @@ public class ResourceBean implements Serializable {
     }
 
     public DownloadInfo.Status getDownloadStatus() {
-        return downloadStatus;
-    }
-
-    public void setDownloadStatus(DownloadInfo.Status downloadStatus) {
-        mDownloadService.setResourceDownloadStatus(resNo, downloadStatus);
-        this.downloadStatus = downloadStatus;
+        return getDownloadInfo().status;
     }
 
     public boolean canCancelDownloadTask() {
@@ -71,7 +62,6 @@ public class ResourceBean implements Serializable {
                 break;
         }
     }
-
 
     public DownloadInfo getDownloadInfo() {
         return getResourceDownloadStatus(buildResourceTask());

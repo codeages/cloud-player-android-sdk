@@ -3,7 +3,6 @@ package com.edusoho.playerdemo.biz.download;
 import com.edusoho.cloud.core.entity.ResourceType;
 import com.edusoho.cloud.manager.DownloadInfo;
 import com.edusoho.cloud.manager.Downloader;
-import com.edusoho.cloud.manager.ResourceTask;
 import com.edusoho.playerdemo.bean.ResourceBean;
 import com.edusoho.playerdemo.biz.download.dao.DownloadDao;
 import com.edusoho.playerdemo.biz.download.dao.DownloadDaoImpl;
@@ -15,7 +14,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static com.edusoho.playerdemo.DemoApplication.app;
@@ -24,21 +22,10 @@ public class DownloadServiceImpl implements DownloadService {
     DownloadDao mDao = new DownloadDaoImpl();
 
     @Override
-    public void setResourceDownloadStatus(String resNo, DownloadInfo.Status status) {
-        mDao.setResourceDownloadStatus(resNo, status.ordinal());
-    }
-
-    @Override
-    public DownloadInfo.Status getResourceDownloadStatus(String resNo) {
-        return Arrays.asList(DownloadInfo.Status.values()).get(mDao.getResourceDownloadStatus(resNo));
-    }
-
-
-    @Override
     public List<ResourceBean> getDownloadResource() {
         List<ResourceBean> resources = new ArrayList<>();
         for (ResourceBean resourceBean : getPresentResourceData()) {
-            if (getResourceDownloadStatus(resourceBean.resNo) == DownloadInfo.Status.COMPLETED) {
+            if (resourceBean.getDownloadStatus() == DownloadInfo.Status.COMPLETED) {
                 resources.add(resourceBean);
             }
         }
@@ -49,8 +36,8 @@ public class DownloadServiceImpl implements DownloadService {
     public List<ResourceBean> getDownloadingResource() {
         List<ResourceBean> resources = new ArrayList<>();
         for (ResourceBean resourceBean : getPresentResourceData()) {
-            if (getResourceDownloadStatus(resourceBean.resNo) != DownloadInfo.Status.COMPLETED
-                    && getResourceDownloadStatus(resourceBean.resNo) != DownloadInfo.Status.NONE) {
+            if (resourceBean.getDownloadStatus() != DownloadInfo.Status.COMPLETED
+                    && resourceBean.getDownloadStatus() != DownloadInfo.Status.NONE) {
                 resources.add(resourceBean);
             }
         }
@@ -61,7 +48,6 @@ public class DownloadServiceImpl implements DownloadService {
     public void deleteResourceByResourceBean(List<ResourceBean> selectedList) {
         for (ResourceBean resourceBean : selectedList) {
             resourceBean.setSelected(false);
-            mDao.setResourceDownloadStatus(resourceBean.resNo, DownloadInfo.Status.NONE.ordinal());
             Downloader.delete(resourceBean.buildResourceTask());
         }
     }
@@ -74,6 +60,7 @@ public class DownloadServiceImpl implements DownloadService {
         }
     }
 
+    @Override
     public List<ResourceBean> getPresentResourceData() {
         List<ResourceBean> params = getResourceByJsonFileName("present_resources.json");
         return params;

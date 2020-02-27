@@ -66,24 +66,24 @@ public class PresentResourceAdapter extends BaseResourceAdapter implements View.
         mHolder.downloadButton.setTag(holder);
 
         DownloadInfo downloadInfo = resourceBean.getDownloadInfo();
-        resourceBean.setDownloadStatus(downloadInfo.getStatus());
+        DownloadInfo.Status downloadStatus = resourceBean.getDownloadStatus();
 
-        if (downloadInfo.getStatus() != DownloadInfo.Status.COMPLETED && downloadInfo.getStatus() != DownloadInfo.Status.NONE) {
+        if (downloadStatus != DownloadInfo.Status.COMPLETED && downloadStatus != DownloadInfo.Status.NONE) {
             mHolder.resourceTitle.setTextColor(mContext.getResources().getColor(R.color.font_grey_color));
             mHolder.resourceNo.setTextColor(mContext.getResources().getColor(R.color.font_grey_color));
         }
 
         mHolder.downloadButton.setMax((int) downloadInfo.getTotalLength());
-        if (downloadInfo.getStatus() == DownloadInfo.Status.PENDING || downloadInfo.getStatus() == DownloadInfo.Status.RUNNING) {
+        if (resourceBean.getDownloadStatus() == DownloadInfo.Status.PENDING || resourceBean.getDownloadStatus() == DownloadInfo.Status.RUNNING) {
             mHolder.downloadButton.setProgress((int) downloadInfo.getCurrentOffset());
-            mHolder.downloadButton.setDownloadStatus(downloadInfo.getStatus());
+            mHolder.downloadButton.setDownloadStatus(downloadStatus);
             mHolder.downloadButton.performClick();
 
-        } else if (downloadInfo.getStatus() == DownloadInfo.Status.COMPLETED) {
-            mHolder.downloadButton.setDownloadStatus(downloadInfo.getStatus());
-        } else if (downloadInfo.getStatus() == DownloadInfo.Status.IDLE) {
+        } else if (downloadStatus == DownloadInfo.Status.COMPLETED) {
+            mHolder.downloadButton.setDownloadStatus(downloadStatus);
+        } else if (downloadStatus == DownloadInfo.Status.IDLE) {
             mHolder.downloadButton.setProgress((int) downloadInfo.getCurrentOffset() == 0 ? 1 : (int) downloadInfo.getCurrentOffset());
-            mHolder.downloadButton.setDownloadStatus(downloadInfo.getStatus());
+            mHolder.downloadButton.setDownloadStatus(downloadStatus);
         } else {
             mHolder.downloadButton.setDownloadStatus(DownloadInfo.Status.NONE);
         }
@@ -131,7 +131,9 @@ public class PresentResourceAdapter extends BaseResourceAdapter implements View.
 
         public Holder(@NonNull View itemView, final OnItemClickListener onItemClickListener) {
             super(itemView);
-            if (itemView == mHeaderView) return;
+            if (itemView == mHeaderView) {
+                return;
+            }
             resourceNo = itemView.findViewById(R.id.resource_no);
             resourceTitle = itemView.findViewById(R.id.resource_title);
             downloadButton = itemView.findViewById(R.id.btn_download);

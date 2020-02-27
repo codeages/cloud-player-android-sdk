@@ -177,9 +177,6 @@ public class DownloadingFragment extends BaseFragment implements DownloadFragmen
                 button.setMax((int) totalLength);
                 button.setDownloadStatus(DownloadInfo.Status.PENDING);
                 button.setProgress(1);
-
-                ResourceBean resourceBean = mDownloadingAdapter.getData().get(position);
-                resourceBean.setDownloadStatus(DownloadInfo.Status.PENDING);
             }
 
             @Override
@@ -191,11 +188,6 @@ public class DownloadingFragment extends BaseFragment implements DownloadFragmen
 
                 button.setDownloadStatus(DownloadInfo.Status.RUNNING);
                 button.setProgress((int) currentOffset);
-
-                ResourceBean resourceBean = mDownloadingAdapter.getData().get(position);
-                if (resourceBean != null) {
-                    resourceBean.setDownloadStatus(DownloadInfo.Status.RUNNING);
-                }
             }
 
             @Override
@@ -204,9 +196,6 @@ public class DownloadingFragment extends BaseFragment implements DownloadFragmen
                 if (position < 0) {
                     return;
                 }
-
-                ResourceBean resourceBean = mDownloadingAdapter.getData().get(position);
-                resourceBean.setDownloadStatus(DownloadInfo.Status.COMPLETED);
 
                 button.setDownloadStatus(DownloadInfo.Status.COMPLETED);
 
